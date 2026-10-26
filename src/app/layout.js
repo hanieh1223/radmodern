@@ -4,7 +4,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://radmodern.example"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
     default: "راد مدرن | راهکارهای دیجیتال",
     template: "%s | راد مدرن",
