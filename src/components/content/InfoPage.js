@@ -1,0 +1,3 @@
+import Link from "next/link";
+import "../../app/info.css";
+export default function InfoPage({eyebrow,title,description,items=[]}){return <main id="main" className="info-page shell"><span className="eyebrow"><i/>{eyebrow}</span><h1>{title}</h1><p className="info-lead">{description}</p>{items.length>0&&<div className="info-grid">{items.map((item,index)=><article key={item.title} className="info-card"><span>{String(index+1).padStart(2,"0")}</span><h2>{item.title}</h2><p>{item.description}</p></article>)}</div>}<section className="info-cta"><div><h2>درباره نیازتان صحبت کنیم.</h2><p>برای بررسی مسئله و انتخاب مسیر مناسب با ما در ارتباط باشید.</p></div><Link className="btn primary" href="/contact">تماس با راد مدرن <b>←</b></Link></section></main>}
