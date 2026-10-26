@@ -1,0 +1,11 @@
+# Project conventions
+- Framework: Next.js App Router, React, JavaScript.
+- All user-facing pages are Persian and RTL.
+- Prefer Server Components. Add "use client" only when browser interaction is required.
+- Use semantic HTML, accessible names, visible focus states, and reduced-motion support.
+- Keep shared navigation and site constants in src/lib/site.js.
+- Keep global design tokens in src/app/globals.css.
+- Do not add dependencies without a clear need.
+- Do not invent portfolio results, client names, contact details, or business claims.
+- Before finishing substantial changes, run npm run lint and npm run build.
+- Never commit secrets, .env files, node_modules, or build output.

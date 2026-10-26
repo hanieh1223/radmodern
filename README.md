@@ -1,16 +1,37 @@
-# React + Vite
+# راد مدرن | RadModern
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+وب‌سایت فارسی شرکت راد مدرن با Next.js App Router و React. رابط کاربری راست‌به‌چپ است و استایل‌ها و توکن‌های طراحی در فایل مرکزی نگهداری می‌شوند.
 
-Currently, two official plugins are available:
+## نیازمندی‌ها
+- Node.js نسخه 22 LTS پیشنهاد می‌شود.
+- npm همراه Node.js نصب می‌شود.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## راه‌اندازی محلی
+```powershell
+npm ci
+npm run dev
+```
+سپس http://localhost:3000 را باز کنید.
 
-## React Compiler
+## بررسی قبل از انتشار
+```powershell
+npm run lint
+npm run build
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ساختار پروژه
+- src/app/: مسیرها، layout، metadata و استایل‌های سراسری
+- src/components/layout/: هدر و فوتر مشترک
+- src/components/content/: اجزای مشترک صفحات محتوایی
+- src/lib/: تنظیمات ثابت و داده‌های مشترک سایت
+- public/: تصاویر، لوگو و فایل‌های ثابت
+- .github/workflows/ci.yml: اجرای خودکار lint و build در GitHub Actions
 
-## Expanding the ESLint configuration
+## اصول نگهداری
+- از افزودن وابستگی جدید بدون نیاز واقعی خودداری کنید.
+- از کامپوننت‌های Server به‌صورت پیش‌فرض استفاده کنید؛ Client Component فقط برای تعامل لازم است.
+- متن‌ها و مسیرهای مشترک را در یک محل نگه دارید.
+- فایل‌های .env.local و اطلاعات محرمانه را commit نکنید.
+- قبل از هر انتشار، lint و build را اجرا کنید.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+صفحات محتوایی فعلی پایه اولیه هستند؛ اطلاعات تماس، نمونه‌کارها و ادعاهای تجاری باید با داده‌های واقعی تکمیل شوند.

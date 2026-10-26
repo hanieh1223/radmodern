@@ -1,0 +1,3 @@
+import InfoPage from "../../components/content/InfoPage";
+export const metadata={title:"نمونه‌کارها",description:"نمونه‌کارها و پروژه‌های راد مدرن."};
+export default function WorkPage(){return <InfoPage eyebrow="نمونه‌کارها / SELECTED WORK" title="هر پروژه، پاسخی به یک نیاز." description="این بخش برای معرفی پروژه‌ها، مسئله اولیه، راهکار اجراشده و نتیجه قابل اندازه‌گیری آماده شده است. نمونه‌کارها پس از آماده شدن اطلاعات واقعی اضافه می‌شوند." items={[{title:"مسئله",description:"نیاز و چالش اصلی هر پروژه را توضیح می‌دهیم."},{title:"راهکار",description:"تصمیم‌های طراحی و فنی را به‌اختصار شرح می‌دهیم."},{title:"نتیجه",description:"نتیجه‌ها را فقط با اطلاعات واقعی و قابل اتکا ارائه می‌کنیم."}]}/>}

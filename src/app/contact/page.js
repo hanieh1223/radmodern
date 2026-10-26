@@ -1,0 +1,3 @@
+import InfoPage from "../../components/content/InfoPage";
+export const metadata={title:"تماس با ما",description:"برای بررسی نیازها و پروژه‌های دیجیتال با راد مدرن در ارتباط باشید."};
+export default function ContactPage(){return <InfoPage eyebrow="در تماس باشیم / CONTACT" title="از مسئله شما شروع می‌کنیم." description="در این مرحله، بهترین کار این است که نیاز و هدف پروژه‌تان را روشن کنیم. اطلاعات تماس و فرم ارسال درخواست در مرحله بعد به این صفحه اضافه می‌شود." items={[{title:"شرح نیاز",description:"مسئله، هدف و نتیجه‌ای را که انتظار دارید مشخص می‌کنیم."},{title:"بررسی اولیه",description:"راهکارهای احتمالی و قدم‌های بعدی را با هم مرور می‌کنیم."}]}/>}
