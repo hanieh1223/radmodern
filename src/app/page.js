@@ -1,69 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
-}
+import Link from "next/link";
+const services=[
+{n:"01",tag:"WEBSITE",title:"طراحی وب‌سایت",desc:"وب‌سایت‌های سریع، واکنش‌گرا و هدفمند برای تقویت اعتبار برند شما."},
+{n:"02",tag:"SOFTWARE",title:"توسعه نرم‌افزار",desc:"سامانه‌ها و ابزارهای اختصاصی متناسب با فرایندهای واقعی کسب‌وکار شما."},
+{n:"03",tag:"ARTIFICIAL INTELLIGENCE",title:"هوش مصنوعی",desc:"راهکارهای کاربردی برای کاهش کارهای تکراری و تصمیم‌گیری هوشمندتر."},
+{n:"04",tag:"OPTIMIZATION",title:"بهینه‌سازی و مشاوره",desc:"بهبود تجربه کاربری، عملکرد و مسیر رشد محصولات دیجیتال شما."}];
+const steps=[["01","شناخت مسئله","هدف‌ها، مخاطبان و چالش‌های فعلی را دقیق بررسی می‌کنیم."],["02","طراحی راهکار","راهکاری متناسب با نیاز، بودجه و مسیر رشد شما تعریف می‌کنیم."],["03","ساخت و ارزیابی","محصول را توسعه می‌دهیم، آزمایش می‌کنیم و بهبود می‌دهیم."]];
+export default function HomePage(){return <main id="main">
+<section className="hero shell"><div className="hero-copy"><span className="eyebrow"><i/>فناوری در خدمت کسب‌وکار</span><h1>ایده‌های پیچیده را به <em>راهکارهای ساده</em> تبدیل می‌کنیم.</h1><p className="lead">از طراحی وب‌سایت تا توسعه نرم‌افزارهای اختصاصی و راهکارهای هوش مصنوعی؛ کمک می‌کنیم فناوری، مسئله‌ای واقعی از کسب‌وکار شما را حل کند.</p><div className="actions"><Link className="btn primary" href="/contact">درباره پروژه‌تان صحبت کنیم <b>←</b></Link><Link className="text-link" href="#services">آشنایی با خدمات ↓</Link></div><div className="proof"><span>R<span>.</span></span><p><b>راهکار متناسب با شما</b><br/>نه یک نسخه تکراری برای همه</p></div></div>
+<div className="visual" aria-label="تصویرسازی انتزاعی فناوری"><div className="grid-bg"/><div className="orbit one"/><div className="orbit two"/><div className="core"><span>R</span><i/></div><div className="float top"><b>&lt;/&gt;</b><span><strong>توسعه هوشمند</strong><small>از ایده تا اجرا</small></span></div><div className="float bottom"><b>✳</b><span><strong>نگاه مسئله‌محور</strong><small>فناوری با هدف مشخص</small></span></div><small className="visual-label">THINK · BUILD · IMPROVE</small></div><div className="hero-index"><b>01</b><i/>راهکارهای دیجیتال</div></section>
+<section className="intro"><div className="shell intro-inner"><h2>فناوری زمانی ارزشمند است که<br/><strong>کار را بهتر پیش ببرد.</strong></h2><p>ما ابتدا مسئله را می‌فهمیم؛ سپس ابزار درست را انتخاب می‌کنیم. نتیجه باید برای شما کاربردی، قابل توسعه و قابل نگهداری باشد.</p></div></section>
+<section className="shell services" id="services"><div className="section-head"><div><small className="kicker">خدمات ما / WHAT WE DO</small><h2>برای نیازهای واقعی،<br/><em>راهکار واقعی</em></h2></div><p>از شروع یک ایده تا بهتر کردن محصولی که همین امروز استفاده می‌کنید، در کنار شما هستیم.</p></div><div className="service-grid">{services.map(s=><article className="service-card" key={s.n}><div className="card-top"><span>{s.n}</span><b>↗</b></div><small className="tag">{s.tag}</small><h3>{s.title}</h3><p>{s.desc}</p><Link href="/contact">بررسی نیاز شما <b>←</b></Link></article>)}</div></section>
+<section className="approach"><div className="shell approach-inner"><div><small className="kicker">روش کار / OUR APPROACH</small><h2>شفاف، مرحله‌به‌مرحله،<br/><em>قابل اتکا.</em></h2><p>همکاری خوب با گفت‌وگوی روشن شروع می‌شود. در هر مرحله می‌دانید چه کاری انجام می‌شود، چرا انجام می‌شود و قدم بعدی چیست.</p><Link className="btn light" href="/about">بیشتر درباره ما ←</Link></div><div className="steps">{steps.map(s=><article key={s[0]}><b>{s[0]}</b><div><h3>{s[1]}</h3><p>{s[2]}</p></div><span>+</span></article>)}</div></div></section>
+<section className="shell cta"><div><small className="kicker">قدم بعدی / LET’S TALK</small><h2>یک مسئله دارید؟<br/><em>از همان‌جا شروع کنیم.</em></h2></div><div><p>نیازتان را برای ما توضیح دهید تا درباره مسیر مناسب صحبت کنیم.</p><Link className="btn primary" href="/contact">شروع گفت‌وگو <b>←</b></Link></div><i/></section>
+</main>}

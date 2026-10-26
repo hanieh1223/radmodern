@@ -1,9 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
-
-## This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+# Project rules
+- Use Next.js App Router and React.
+- Keep all user-facing content in Persian and the interface right-to-left.
+- Prefer semantic HTML and accessible navigation.
+- Keep design tokens and global styles in src/app/globals.css.
+- Prefer server components; add client components only when needed.
+- Avoid unnecessary dependencies.
+- Run npm run lint and npm run build after substantial changes.
+- Never commit secrets or generated build output.

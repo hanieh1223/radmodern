@@ -1,0 +1,4 @@
+import Link from "next/link";
+const right=[["/services","خدمات"],["/work","نمونه‌کارها"],["/ai","هوش مصنوعی"]];
+const left=[["/optimization","بهینه‌سازی"],["/about","درباره ما"]];
+export default function Header(){return <header className="header"><div className="shell header-inner"><nav className="nav nav-right" aria-label="منوی اصلی">{right.map(([href,label])=><Link href={href} key={href}>{label}</Link>)}</nav><Link href="/" className="brand" aria-label="راد مدرن، صفحه اصلی"><span className="brand-icon">R<span>.</span></span><span>راد مدرن<small>RAD MODERN</small></span></Link><nav className="nav nav-left" aria-label="پیوندهای تکمیلی">{left.map(([href,label])=><Link href={href} key={href}>{label}</Link>)}<Link className="contact-link" href="/contact">تماس با ما <b>↗</b></Link></nav></div></header>}
